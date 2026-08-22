@@ -1,0 +1,293 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396" style="background: #05070D;">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070D"/>
+      <stop offset="40%" stop-color="#07111D"/>
+      <stop offset="80%" stop-color="#0A0F18"/>
+      <stop offset="100%" stop-color="#05070D"/>
+    </linearGradient>
+
+    <radialGradient id="radialCyan" cx="75%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.22"/>
+      <stop offset="50%" stop-color="#8A2BE2" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#05070D" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="radialPurple" cx="25%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#8A2BE2" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#05070D" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Linear Accent Gradients -->
+    <linearGradient id="neonTitle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#8A2BE2"/>
+    </linearGradient>
+
+    <linearGradient id="cyanPurpleBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#FF006E"/>
+    </linearGradient>
+
+    <linearGradient id="hudLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#00E5FF" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#8A2BE2" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FF006E" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- HUD Grid Pattern -->
+    <pattern id="bannerGrid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.06"/>
+      <circle cx="0" cy="0" r="0.8" fill="#00E5FF" fill-opacity="0.25"/>
+    </pattern>
+
+    <!-- Hexagon Pattern Overlay -->
+    <pattern id="hexPattern" width="60" height="103.92" patternUnits="userSpaceOnUse" patternTransform="scale(0.5)">
+      <path d="M30 0 L60 17.32 L60 51.96 L30 69.28 L0 51.96 L0 17.32 Z M30 103.92 L60 86.6 L60 51.96 L30 69.28 L0 51.96 L0 86.6 Z" fill="none" stroke="#8A2BE2" stroke-width="0.75" stroke-opacity="0.07"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .mono { font-family: 'SF Mono', 'Fira Code', 'Courier New', Monaco, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .bold { font-weight: 800; }
+    .heavy { font-weight: 900; }
+  </style>
+
+  <!-- ── BASE BACKGROUND ── -->
+  <rect width="1584" height="396" fill="url(#bgGradient)"/>
+  <rect width="1584" height="396" fill="url(#bannerGrid)"/>
+  <rect width="1584" height="396" fill="url(#hexPattern)"/>
+
+  <!-- Ambient Light Orbs -->
+  <rect width="1584" height="396" fill="url(#radialCyan)"/>
+  <rect width="1584" height="396" fill="url(#radialPurple)"/>
+
+  <!-- ── OUTER HUD TECH FRAMEWORK ── -->
+  <rect x="12" y="12" width="1560" height="372" rx="8" fill="none" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.25"/>
+  <rect x="16" y="16" width="1552" height="364" rx="6" fill="none" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.1"/>
+
+  <!-- Corner Brackets -->
+  <!-- Top-Left -->
+  <path d="M 12 45 L 12 12 L 45 12" fill="none" stroke="#00E5FF" stroke-width="2.5"/>
+  <rect x="18" y="18" width="3" height="3" fill="#00E5FF"/>
+  <!-- Top-Right -->
+  <path d="M 1539 12 L 1572 12 L 1572 45" fill="none" stroke="#00E5FF" stroke-width="2.5"/>
+  <rect x="1563" y="18" width="3" height="3" fill="#00E5FF"/>
+  <!-- Bottom-Left -->
+  <path d="M 12 351 L 12 384 L 45 384" fill="none" stroke="#8A2BE2" stroke-width="2.5"/>
+  <rect x="18" y="375" width="3" height="3" fill="#8A2BE2"/>
+  <!-- Bottom-Right -->
+  <path d="M 1539 384 L 1572 384 L 1572 351" fill="none" stroke="#8A2BE2" stroke-width="2.5"/>
+  <rect x="1563" y="375" width="3" height="3" fill="#8A2BE2"/>
+
+  <!-- Top Telemetry Bar -->
+  <g class="mono" font-size="10" transform="translate(42, 34)">
+    <circle cx="0" cy="0" r="3.5" fill="#00E5FF" filter="url(#glowCyan)"/>
+    <text x="12" y="3.5" fill="#00E5FF" font-weight="700" letter-spacing="1.5">AI SYSTEM // ONLINE</text>
+    <text x="210" y="3.5" fill="#8A2BE2" font-weight="600" letter-spacing="1">PROFILE :: MOHAN_PRASANTH_K</text>
+    <text x="500" y="3.5" fill="#B8C7D9" letter-spacing="1">LOCATION: COIMBATORE, IN</text>
+    
+    <!-- Top Right Specs -->
+    <text x="1230" y="3.5" fill="#00E5FF" font-weight="700" letter-spacing="1.2">SYS_STATUS: [ READY_FOR_HIRE ]</text>
+    <line x1="0" y1="14" x2="1500" y2="14" stroke="url(#hudLineGrad)" stroke-width="1"/>
+  </g>
+
+  <!-- ── AVATAR SAFE-ZONE VISUAL GUIDE ACCENT (Bottom-Left) ── -->
+  <!-- Subtle decorative HUD arc positioned nicely above where LinkedIn circular avatar sits -->
+  <g transform="translate(145, 290)">
+    <circle cx="0" cy="0" r="105" fill="none" stroke="#00E5FF" stroke-opacity="0.08" stroke-width="1" stroke-dasharray="4 8"/>
+    <circle cx="0" cy="0" r="118" fill="none" stroke="#8A2BE2" stroke-opacity="0.06" stroke-width="1"/>
+  </g>
+
+  <!-- ── MAIN IDENTITY ZONE (Shifted right for perfect LinkedIn avatar balance) ── -->
+  <g transform="translate(360, 95)">
+    <!-- Subtitle Badge -->
+    <rect x="0" y="0" width="220" height="22" rx="4" fill="#8A2BE2" fill-opacity="0.15" stroke="#8A2BE2" stroke-width="1"/>
+    <text x="10" y="15" class="mono" font-size="10.5" fill="#8A2BE2" font-weight="700" letter-spacing="2">AI &amp; ML DEVELOPER</text>
+
+    <!-- Main Name Title -->
+    <text x="0" y="68" class="sans heavy" font-size="44" fill="url(#neonTitle)" letter-spacing="3" filter="drop-shadow(0 0 16px rgba(0, 229, 255, 0.4))">
+      MOHAN PRASANTH K
+    </text>
+
+    <!-- Main Roles & Sub-headline -->
+    <text x="2" y="100" class="sans bold" font-size="18" fill="#FFFFFF" letter-spacing="1.5">
+      AI / ML Developer <tspan fill="#00E5FF">◈</tspan> Full-Stack Engineer <tspan fill="#8A2BE2">◈</tspan> Deep Learning Enthusiast
+    </text>
+
+    <!-- Tagline -->
+    <text x="2" y="126" class="mono" font-size="12" fill="#B8C7D9" letter-spacing="1">
+      "Intelligent AI models. Built for full-stack impact."
+    </text>
+
+    <!-- 4 Domain Tags -->
+    <g transform="translate(0, 146)">
+      <!-- Tag 1: Computer Vision -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="138" height="32" rx="5" fill="#07111D" stroke="#00E5FF" stroke-opacity="0.4" stroke-width="1"/>
+        <line x1="0" y1="0" x2="0" y2="32" stroke="#00E5FF" stroke-width="3"/>
+        <text x="12" y="20" class="mono bold" font-size="10" fill="#00E5FF">COMPUTER VISION</text>
+      </g>
+
+      <!-- Tag 2: Deep Learning -->
+      <g transform="translate(148, 0)">
+        <rect x="0" y="0" width="132" height="32" rx="5" fill="#07111D" stroke="#8A2BE2" stroke-opacity="0.4" stroke-width="1"/>
+        <line x1="0" y1="0" x2="0" y2="32" stroke="#8A2BE2" stroke-width="3"/>
+        <text x="12" y="20" class="mono bold" font-size="10" fill="#8A2BE2">DEEP LEARNING</text>
+      </g>
+
+      <!-- Tag 3: Cybersecurity -->
+      <g transform="translate(290, 0)">
+        <rect x="0" y="0" width="128" height="32" rx="5" fill="#07111D" stroke="#FF006E" stroke-opacity="0.4" stroke-width="1"/>
+        <line x1="0" y1="0" x2="0" y2="32" stroke="#FF006E" stroke-width="3"/>
+        <text x="12" y="20" class="mono bold" font-size="10" fill="#FF006E">CYBERSECURITY</text>
+      </g>
+
+      <!-- Tag 4: AWS Cloud -->
+      <g transform="translate(428, 0)">
+        <rect x="0" y="0" width="130" height="32" rx="5" fill="#07111D" stroke="#00E5FF" stroke-opacity="0.4" stroke-width="1"/>
+        <line x1="0" y1="0" x2="0" y2="32" stroke="#00E5FF" stroke-width="3"/>
+        <text x="12" y="20" class="mono bold" font-size="10" fill="#00E5FF">AWS &amp; CLOUD</text>
+      </g>
+    </g>
+
+    <!-- Bottom Contact Badges (Under Identity) -->
+    <g transform="translate(0, 202)" class="mono" font-size="11">
+      <!-- Portfolio link -->
+      <rect x="0" y="-12" width="220" height="26" rx="4" fill="#07111D" stroke="#00E5FF" stroke-opacity="0.3"/>
+      <circle cx="12" cy="1" r="3.5" fill="#00E5FF"/>
+      <text x="24" y="5" fill="#FFFFFF" font-weight="600">mohan-mp.vercel.app</text>
+
+      <!-- Email link -->
+      <rect x="232" y="-12" width="250" height="26" rx="4" fill="#07111D" stroke="#8A2BE2" stroke-opacity="0.3"/>
+      <circle cx="244" cy="1" r="3.5" fill="#8A2BE2"/>
+      <text x="256" y="5" fill="#FFFFFF" font-weight="600">mohanprasanth02@gmail.com</text>
+
+      <!-- GitHub -->
+      <rect x="494" y="-12" width="180" height="26" rx="4" fill="#07111D" stroke="#FF006E" stroke-opacity="0.3"/>
+      <circle cx="506" cy="1" r="3.5" fill="#FF006E"/>
+      <text x="518" y="5" fill="#FFFFFF" font-weight="600">github/mohanprasanth02</text>
+    </g>
+  </g>
+
+  <!-- ── RIGHT SIDE: HOLOGRAPHIC 3D NEURAL CORE & HUD TELEMETRY ── -->
+  <g transform="translate(1320, 198)">
+    <!-- Ambient Radial Glow behind Core -->
+    <circle cx="0" cy="0" r="140" fill="url(#radialCyan)" opacity="0.6"/>
+
+    <!-- Orbital Rings -->
+    <!-- Outer Orbit Ring 1 -->
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#00E5FF" stroke-opacity="0.18" stroke-width="1.2" stroke-dasharray="6 12"/>
+    
+    <!-- Outer Orbit Ring 2 -->
+    <g transform="rotate(35)">
+      <ellipse cx="0" cy="0" rx="100" ry="100" fill="none" stroke="#8A2BE2" stroke-opacity="0.45" stroke-width="1.8" stroke-dasharray="24 14 8 14"/>
+      <circle cx="100" cy="0" r="4" fill="#00E5FF" filter="url(#glowCyan)"/>
+      <circle cx="-100" cy="0" r="3.5" fill="#FF006E"/>
+    </g>
+
+    <!-- Inner Orbit Ring 3 -->
+    <g transform="rotate(-20)">
+      <ellipse cx="0" cy="0" rx="76" ry="76" fill="none" stroke="#00E5FF" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="30 8 8 8"/>
+      <circle cx="0" cy="76" r="3.5" fill="#8A2BE2" filter="url(#glowPurple)"/>
+      <circle cx="0" cy="-76" r="3" fill="#00E5FF"/>
+    </g>
+
+    <!-- Crosshair Lines -->
+    <line x1="-55" y1="0" x2="55" y2="0" stroke="#00E5FF" stroke-opacity="0.3" stroke-width="1"/>
+    <line x1="0" y1="-55" x2="0" y2="55" stroke="#00E5FF" stroke-opacity="0.3" stroke-width="1"/>
+    
+    <!-- Central HUD Core Box -->
+    <circle cx="0" cy="0" r="48" fill="#05070D" fill-opacity="0.85" stroke="#00E5FF" stroke-opacity="0.6" stroke-width="1.5"/>
+
+    <!-- Neural Network Synapse Lines -->
+    <g stroke="#00E5FF" stroke-opacity="0.4" stroke-width="1.2">
+      <line x1="-24" y1="-18" x2="0" y2="0"/>
+      <line x1="-24" y1="18" x2="0" y2="0"/>
+      <line x1="24" y1="-18" x2="0" y2="0"/>
+      <line x1="24" y1="18" x2="0" y2="0"/>
+      <line x1="0" y1="-28" x2="0" y2="0"/>
+      <line x1="0" y1="28" x2="0" y2="0"/>
+    </g>
+
+    <!-- Neural Nodes -->
+    <circle cx="-24" cy="-18" r="4" fill="#00E5FF"/>
+    <circle cx="-24" cy="18" r="4" fill="#8A2BE2"/>
+    <circle cx="24" cy="-18" r="4" fill="#8A2BE2"/>
+    <circle cx="24" cy="18" r="4" fill="#00E5FF"/>
+    <circle cx="0" cy="-28" r="3" fill="#00E5FF"/>
+    <circle cx="0" cy="28" r="3" fill="#FF006E"/>
+
+    <!-- Central Pulsing Core -->
+    <circle cx="0" cy="0" r="10" fill="url(#cyanPurpleBar)" filter="url(#glowCyan)"/>
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
+
+    <!-- HUD Label -->
+    <text x="0" y="38" text-anchor="middle" class="mono" font-size="7.5" fill="#00E5FF" font-weight="700" letter-spacing="1">NEURAL_CORE</text>
+  </g>
+
+  <!-- ── RIGHT SIDE TELEMETRY METRIC BADGES ── -->
+  <g transform="translate(1080, 95)">
+    <!-- Metric 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="105" height="52" rx="6" fill="#07111D" stroke="#00E5FF" stroke-opacity="0.3" stroke-width="1"/>
+      <text x="12" y="24" class="mono heavy" font-size="20" fill="#00E5FF">10+</text>
+      <text x="12" y="42" class="mono" font-size="8.5" fill="#B8C7D9">AI PROJECTS</text>
+    </g>
+
+    <!-- Metric 2 -->
+    <g transform="translate(0, 62)">
+      <rect x="0" y="0" width="105" height="52" rx="6" fill="#07111D" stroke="#8A2BE2" stroke-opacity="0.3" stroke-width="1"/>
+      <text x="12" y="24" class="mono heavy" font-size="20" fill="#8A2BE2">12+</text>
+      <text x="12" y="42" class="mono" font-size="8.5" fill="#B8C7D9">MONTHS EXP</text>
+    </g>
+
+    <!-- Metric 3 -->
+    <g transform="translate(0, 124)">
+      <rect x="0" y="0" width="105" height="52" rx="6" fill="#07111D" stroke="#FF006E" stroke-opacity="0.3" stroke-width="1"/>
+      <text x="12" y="24" class="mono heavy" font-size="18" fill="#FF006E">AWS</text>
+      <text x="12" y="42" class="mono" font-size="8.5" fill="#B8C7D9">CERTIFIED</text>
+    </g>
+
+    <!-- Metric 4 -->
+    <g transform="translate(0, 186)">
+      <rect x="0" y="0" width="105" height="52" rx="6" fill="#07111D" stroke="#00E5FF" stroke-opacity="0.3" stroke-width="1"/>
+      <text x="12" y="24" class="mono heavy" font-size="18" fill="#00E5FF">B.E.</text>
+      <text x="12" y="42" class="mono" font-size="8.5" fill="#B8C7D9">AI &amp; ML '28</text>
+    </g>
+  </g>
+
+  <!-- ── BOTTOM ACCENT RUNNER ── -->
+  <g transform="translate(360, 360)">
+    <line x1="0" y1="0" x2="1170" y2="0" stroke="#00E5FF" stroke-opacity="0.2" stroke-width="1"/>
+    <line x1="0" y1="0" x2="140" y2="0" stroke="#00E5FF" stroke-width="2.5" filter="url(#glowCyan)"/>
+    <line x1="1030" y1="0" x2="1170" y2="0" stroke="#8A2BE2" stroke-width="2.5" filter="url(#glowPurple)"/>
+    
+    <text x="160" y="4" class="mono" font-size="9" fill="#B8C7D9" letter-spacing="1">
+      STACK: Python · TensorFlow · PyTorch · OpenCV · MediaPipe · YOLO · Flask · SQLite · SNORT · AWS
+    </text>
+  </g>
+</svg>
