@@ -1,0 +1,39 @@
+name: Generate Contribution Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Generate Snake Animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=#00E5FF&color_dots=#07111D,#1A2B4C,#8A2BE2,#00E5FF,#FF006E
+            dist/github-snake-purple.svg?color_snake=#8A2BE2&color_dots=#05070D,#0A0F18,#3F1470,#8A2BE2,#00E5FF
+
+      - name: Commit & Push Snake SVG
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/
+          if git status --porcelain | grep dist/; then
+            git commit -m "chore(snake): update contribution snake animation [skip ci]"
+            git push
+          else
+            echo "No snake changes to commit"
+          fi

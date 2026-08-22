@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 220" width="100%" height="100%" style="background: transparent;">
+  <defs>
+    <linearGradient id="pipeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070D"/>
+      <stop offset="50%" stop-color="#07111D"/>
+      <stop offset="100%" stop-color="#0A0F18"/>
+    </linearGradient>
+
+    <linearGradient id="cardGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#8A2BE2" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#FF006E"/>
+    </linearGradient>
+
+    <filter id="pGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes flowDash {
+      to { stroke-dashoffset: -32; }
+    }
+    @keyframes pulseCard {
+      0%, 100% { stroke-opacity: 0.3; }
+      50% { stroke-opacity: 0.9; }
+    }
+    @keyframes packetHop1 { 0% { cx: 80px; } 100% { cx: 840px; } }
+    .mono { font-family: 'SF Mono', Monaco, 'Fira Code', 'Courier New', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .pipeline-line { stroke-dasharray: 4 4; animation: flowDash 1.2s linear infinite; }
+  </style>
+
+  <!-- Frame Background -->
+  <rect x="2" y="2" width="916" height="216" rx="10" fill="url(#pipeBg)" stroke="#00E5FF" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(24, 28)">
+    <text class="mono" font-size="11" font-weight="700" fill="#00E5FF" letter-spacing="1.5">
+      PIPELINE ARCHITECTURE // END-TO-END AI ENGINEERING LIFECYCLE
+    </text>
+    <text x="730" y="0" class="mono" font-size="10" fill="#8A2BE2" font-weight="600">
+      FLOW: CONTINUOUS
+    </text>
+    <line x1="0" y1="10" x2="868" y2="10" stroke="#00E5FF" stroke-opacity="0.2" stroke-width="1"/>
+  </g>
+
+  <!-- Central Connecting Bus Line -->
+  <line x1="68" y1="110" x2="852" y2="110" stroke="#00E5FF" stroke-width="2" class="pipeline-line" opacity="0.6"/>
+
+  <!-- 7 Pipeline Stage Nodes -->
+
+  <!-- Stage 01: REAL PROBLEM -->
+  <g transform="translate(24, 60)">
+    <rect x="0" y="0" width="105" height="100" rx="8" fill="#07111D" stroke="#00E5FF" stroke-opacity="0.4" stroke-width="1.2"/>
+    <rect x="0" y="0" width="105" height="20" rx="6" fill="#00E5FF" fill-opacity="0.1"/>
+    <text x="52" y="14" text-anchor="middle" class="mono" font-size="9" fill="#00E5FF" font-weight="700">STAGE // 01</text>
+    
+    <text x="52" y="44" text-anchor="middle" class="sans" font-size="11" fill="#FFFFFF" font-weight="700">REAL</text>
+    <text x="52" y="58" text-anchor="middle" class="sans" font-size="11" fill="#FFFFFF" font-weight="700">PROBLEM</text>
+    <text x="52" y="82" text-anchor="middle" class="mono" font-size="8" fill="#B8C7D9">Scoping &amp; Req</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <polygon points="135,110 142,106 142,114" fill="#00E5FF"/>
+
+  <!-- Stage 02: DATA COLLECTION -->
+  <g transform="translate(148, 60)">
+    <rect x="0" y="0" width="105" height="100" rx="8" fill="#07111D" stroke="#00E5FF" stroke-opacity="0.4" stroke-width="1.2"/>
+    <rect x="0" y="0" width="105" height="20" rx="6" fill="#00E5FF" fill-opacity="0.1"/>
+    <text x="52" y="14" text-anchor="middle" class="mono" font-size="9" fill="#00E5FF" font-weight="700">STAGE // 02</text>
+    
+    <text x="52" y="44" text-anchor="middle" class="sans" font-size="11" fill="#FFFFFF" font-weight="700">DATA</text>
+    <text x="52" y="58" text-anchor="middle" class="sans" font-size="11" fill="#FFFFFF" font-weight="700">GATHERING</text>
+    <text x="52" y="82" text-anchor="middle" class="mono" font-size="8" fill="#B8C7D9">APIs / Vision</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <polygon points="259,110 266,106 266,114" fill="#00E5FF"/>
+
+  <!-- Stage 03: PREPROCESSING -->
+  <g transform="translate(272, 60)">
+    <rect x="0" y="0" width="105" height="100" rx="8" fill="#07111D" stroke="#8A2BE2" stroke-opacity="0.4" stroke-width="1.2"/>
+    <rect x="0" y="0" width="105" height="20" rx="6" fill="#8A2BE2" fill-opacity="0.15"/>
+    <text x="52" y="14" text-anchor="middle" class="mono" font-size="9" fill="#8A2BE2" font-weight="700">STAGE // 03</text>
+    
+    <text x="52" y="44" text-anchor="middle" class="sans" font-size="11" fill="#FFFFFF" font-weight="700">PRE-</text>
+    <text x="52" y="58" text-anchor="middle" class="sans" font-size="11" fill="#FFFFFF" font-weight="700">PROCESSING</text>
+    <text x="52" y="82" text-anchor="middle" class="mono" font-size="8" fill="#B8C7D9">Pandas / Augment</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <polygon points="383,110 390,106 390,114" fill="#8A2BE2"/>
+
+  <!-- Stage 04: AI / ML MODEL (Highlighted Core) -->
+  <g transform="translate(396, 52)">
+    <rect x="0" y="0" width="115" height="114" rx="8" fill="#0A0F18" stroke="#00E5FF" stroke-width="1.8" filter="url(#pGlow)"/>
+    <rect x="0" y="0" width="115" height="22" rx="6" fill="url(#flowGrad)" fill-opacity="0.3"/>
+    <text x="57" y="15" text-anchor="middle" class="mono" font-size="9" fill="#00E5FF" font-weight="800">CORE // 04</text>
+    
+    <text x="57" y="46" text-anchor="middle" class="sans" font-size="12" fill="#FFFFFF" font-weight="800">AI / ML</text>
+    <text x="57" y="62" text-anchor="middle" class="sans" font-size="12" fill="#00E5FF" font-weight="800">MODEL</text>
+    <text x="57" y="84" text-anchor="middle" class="mono" font-size="8" fill="#B8C7D9">CNN / BERT / YOLO</text>
+    <text x="57" y="98" text-anchor="middle" class="mono" font-size="8" fill="#8A2BE2">Training (.pkl/.h5)</text>
+  </g>
+
+  <!-- Arrow 4 -->
+  <polygon points="517,110 524,106 524,114" fill="#8A2BE2"/>
+
+  <!-- Stage 05: API / BACKEND -->
+  <g transform="translate(530, 60)">
+    <rect x="0" y="0" width="105" height="100" rx="8" fill="#07111D" stroke="#8A2BE2" stroke-opacity="0.4" stroke-width="1.2"/>
+    <rect x="0" y="0" width="105" height="20" rx="6" fill="#8A2BE2" fill-opacity="0.15"/>
+    <text x="52" y="14" text-anchor="middle" class="mono" font-size="9" fill="#8A2BE2" font-weight="700">STAGE // 05</text>
+    
+    <text x="52" y="44" text-anchor="middle" class="sans" font-size="11" fill="#FFFFFF" font-weight="700">API /</text>
+    <text x="52" y="58" text-anchor="middle" class="sans" font-size="11" fill="#FFFFFF" font-weight="700">BACKEND</text>
+    <text x="52" y="82" text-anchor="middle" class="mono" font-size="8" fill="#B8C7D9">Flask / SQLite</text>
+  </g>
+
+  <!-- Arrow 5 -->
+  <polygon points="641,110 648,106 648,114" fill="#00E5FF"/>
+
+  <!-- Stage 06: USER INTERFACE -->
+  <g transform="translate(654, 60)">
+    <rect x="0" y="0" width="105" height="100" rx="8" fill="#07111D" stroke="#00E5FF" stroke-opacity="0.4" stroke-width="1.2"/>
+    <rect x="0" y="0" width="105" height="20" rx="6" fill="#00E5FF" fill-opacity="0.1"/>
+    <text x="52" y="14" text-anchor="middle" class="mono" font-size="9" fill="#00E5FF" font-weight="700">STAGE // 06</text>
+    
+    <text x="52" y="44" text-anchor="middle" class="sans" font-size="11" fill="#FFFFFF" font-weight="700">USER</text>
+    <text x="52" y="58" text-anchor="middle" class="sans" font-size="11" fill="#FFFFFF" font-weight="700">INTERFACE</text>
+    <text x="52" y="82" text-anchor="middle" class="mono" font-size="8" fill="#B8C7D9">Web / Live Cam</text>
+  </g>
+
+  <!-- Arrow 6 -->
+  <polygon points="765,110 772,106 772,114" fill="#FF006E"/>
+
+  <!-- Stage 07: REAL IMPACT -->
+  <g transform="translate(778, 60)">
+    <rect x="0" y="0" width="115" height="100" rx="8" fill="#07111D" stroke="#FF006E" stroke-opacity="0.4" stroke-width="1.2"/>
+    <rect x="0" y="0" width="115" height="20" rx="6" fill="#FF006E" fill-opacity="0.15"/>
+    <text x="57" y="14" text-anchor="middle" class="mono" font-size="9" fill="#FF006E" font-weight="700">STAGE // 07</text>
+    
+    <text x="57" y="44" text-anchor="middle" class="sans" font-size="11" fill="#FFFFFF" font-weight="700">REAL-WORLD</text>
+    <text x="57" y="58" text-anchor="middle" class="sans" font-size="11" fill="#FF006E" font-weight="700">IMPACT</text>
+    <text x="57" y="82" text-anchor="middle" class="mono" font-size="8" fill="#B8C7D9">Deployed Solutions</text>
+  </g>
+
+  <!-- Bottom Telemetry Text -->
+  <g transform="translate(24, 195)" class="mono" font-size="9" fill="#B8C7D9">
+    <text x="10" y="0">
+      <tspan fill="#00E5FF">DATAFLOW:</tspan> RAW DATA ➔ NORMALIZATION ➔ INFERENCE ➔ JSON RESPONSE ➔ CLIENT RENDER
+    </text>
+  </g>
+</svg>

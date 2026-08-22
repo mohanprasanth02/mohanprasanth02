@@ -1,0 +1,250 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" width="100%" height="100%" style="background: transparent;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070D"/>
+      <stop offset="50%" stop-color="#07111D"/>
+      <stop offset="100%" stop-color="#0A0F18"/>
+    </linearGradient>
+    
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#FF006E"/>
+    </linearGradient>
+
+    <linearGradient id="glowCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00E5FF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Filters for Neon Glow -->
+    <filter id="neonGlowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="neonGlowPurple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Patterns -->
+    <pattern id="hudGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.07"/>
+      <circle cx="0" cy="0" r="1" fill="#00E5FF" fill-opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes scanMove {
+      0% { transform: translateY(-50px); opacity: 0; }
+      20% { opacity: 0.8; }
+      80% { opacity: 0.8; }
+      100% { transform: translateY(380px); opacity: 0; }
+    }
+    @keyframes pulseNode {
+      0%, 100% { r: 4px; opacity: 0.6; filter: drop-shadow(0 0 2px #00E5FF); }
+      50% { r: 6.5px; opacity: 1; filter: drop-shadow(0 0 8px #00E5FF); }
+    }
+    @keyframes pulsePurple {
+      0%, 100% { r: 5px; opacity: 0.6; filter: drop-shadow(0 0 3px #8A2BE2); }
+      50% { r: 8px; opacity: 1; filter: drop-shadow(0 0 10px #8A2BE2); }
+    }
+    @keyframes dashCycle {
+      to { stroke-dashoffset: -40; }
+    }
+    @keyframes packetFlow {
+      0% { offset-distance: 0%; opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { offset-distance: 100%; opacity: 0; }
+    }
+    @keyframes telemetryBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    @keyframes rotateRing {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes rotateRingRev {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    .mono { font-family: 'SF Mono', Monaco, 'Fira Code', 'Courier New', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .scan-line { animation: scanMove 4.5s ease-in-out infinite; }
+    .tele-blink { animation: telemetryBlink 2s infinite ease-in-out; }
+    .flow-line { stroke-dasharray: 6 6; animation: dashCycle 2s linear infinite; }
+  </style>
+
+  <!-- Background Base -->
+  <rect x="2" y="2" width="916" height="376" rx="14" fill="url(#bgGrad)" stroke="#00E5FF" stroke-opacity="0.3" stroke-width="1.5"/>
+  <rect x="2" y="2" width="916" height="376" rx="14" fill="url(#hudGrid)"/>
+
+  <!-- Scanning Line -->
+  <g class="scan-line">
+    <line x1="10" y1="0" x2="910" y2="0" stroke="#00E5FF" stroke-width="2" opacity="0.7" filter="url(#neonGlowCyan)"/>
+    <rect x="10" y="-30" width="900" height="30" fill="url(#scanGrad)"/>
+  </g>
+
+  <!-- HUD Outer Corners -->
+  <!-- Top-Left -->
+  <path d="M 12 34 L 12 12 L 34 12" fill="none" stroke="#00E5FF" stroke-width="2.5"/>
+  <rect x="16" y="16" width="3" height="3" fill="#00E5FF"/>
+  <!-- Top-Right -->
+  <path d="M 886 12 L 908 12 L 908 34" fill="none" stroke="#00E5FF" stroke-width="2.5"/>
+  <rect x="901" y="16" width="3" height="3" fill="#00E5FF"/>
+  <!-- Bottom-Left -->
+  <path d="M 12 346 L 12 368 L 34 368" fill="none" stroke="#00E5FF" stroke-width="2.5"/>
+  <rect x="16" y="361" width="3" height="3" fill="#00E5FF"/>
+  <!-- Bottom-Right -->
+  <path d="M 886 368 L 908 368 L 908 346" fill="none" stroke="#00E5FF" stroke-width="2.5"/>
+  <rect x="901" y="361" width="3" height="3" fill="#00E5FF"/>
+
+  <!-- Top Status Bar -->
+  <g class="mono" font-size="11">
+    <rect x="34" y="18" width="852" height="24" rx="4" fill="#07111D" stroke="#00E5FF" stroke-opacity="0.2"/>
+    <circle cx="48" cy="30" r="4" fill="#00E5FF" class="tele-blink"/>
+    <text x="60" y="34" fill="#00E5FF" font-weight="700" letter-spacing="1.5">AI SYSTEM // ONLINE</text>
+    <text x="240" y="34" fill="#8A2BE2" font-weight="600" letter-spacing="1">ARCH: NEURAL_CORE_V3</text>
+    <text x="460" y="34" fill="#B8C7D9" letter-spacing="1">HOST: MOHAN_PRASANTH_K</text>
+    
+    <g transform="translate(730, 24)">
+      <rect x="0" y="0" width="70" height="12" rx="2" fill="#00E5FF" fill-opacity="0.1" stroke="#00E5FF" stroke-opacity="0.4"/>
+      <rect x="0" y="0" width="56" height="12" rx="2" fill="#00E5FF" fill-opacity="0.4"/>
+      <text x="78" y="10" fill="#00E5FF" font-size="10" font-weight="bold">ACTIVE</text>
+    </g>
+  </g>
+
+  <!-- Left Content: Identity & Positioning -->
+  <g transform="translate(42, 70)">
+    <!-- Subtitle Tag -->
+    <rect x="0" y="0" width="165" height="20" rx="3" fill="#8A2BE2" fill-opacity="0.15" stroke="#8A2BE2" stroke-width="1"/>
+    <text x="8" y="14" fill="#8A2BE2" class="mono" font-size="10" font-weight="700" letter-spacing="1.5">CLASSIFIED // AI_CORE</text>
+
+    <!-- Main Title -->
+    <text x="0" y="58" class="sans" font-weight="900" font-size="34" fill="#FFFFFF" letter-spacing="2">
+      MOHAN PRASANTH K
+    </text>
+    
+    <!-- Gradient Role Header -->
+    <text x="0" y="88" class="sans" font-weight="700" font-size="17" fill="url(#cyanPurple)" letter-spacing="2">
+      AI &amp; MACHINE LEARNING DEVELOPER · FULL-STACK ENGINEER
+    </text>
+
+    <text x="0" y="112" class="mono" font-size="12" fill="#B8C7D9" letter-spacing="1">
+      Specializing in Deep Learning, Computer Vision &amp; AI Web Architectures
+    </text>
+
+    <!-- Tech Badges / Modules -->
+    <g transform="translate(0, 134)">
+      <!-- Box 1: Computer Vision -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="145" height="48" rx="6" fill="#07111D" stroke="#00E5FF" stroke-opacity="0.3" stroke-width="1"/>
+        <line x1="0" y1="0" x2="0" y2="48" stroke="#00E5FF" stroke-width="3"/>
+        <text x="12" y="20" class="mono" font-size="9" fill="#00E5FF" font-weight="700" letter-spacing="1">DOMAIN // 01</text>
+        <text x="12" y="38" class="sans" font-size="12" fill="#FFFFFF" font-weight="600">COMPUTER VISION</text>
+      </g>
+
+      <!-- Box 2: Deep Learning -->
+      <g transform="translate(155, 0)">
+        <rect x="0" y="0" width="145" height="48" rx="6" fill="#07111D" stroke="#8A2BE2" stroke-opacity="0.3" stroke-width="1"/>
+        <line x1="0" y1="0" x2="0" y2="48" stroke="#8A2BE2" stroke-width="3"/>
+        <text x="12" y="20" class="mono" font-size="9" fill="#8A2BE2" font-weight="700" letter-spacing="1">DOMAIN // 02</text>
+        <text x="12" y="38" class="sans" font-size="12" fill="#FFFFFF" font-weight="600">DEEP LEARNING</text>
+      </g>
+
+      <!-- Box 3: Cybersecurity -->
+      <g transform="translate(310, 0)">
+        <rect x="0" y="0" width="145" height="48" rx="6" fill="#07111D" stroke="#FF006E" stroke-opacity="0.3" stroke-width="1"/>
+        <line x1="0" y1="0" x2="0" y2="48" stroke="#FF006E" stroke-width="3"/>
+        <text x="12" y="20" class="mono" font-size="9" fill="#FF006E" font-weight="700" letter-spacing="1">DOMAIN // 03</text>
+        <text x="12" y="38" class="sans" font-size="12" fill="#FFFFFF" font-weight="600">CYBERSECURITY</text>
+      </g>
+    </g>
+
+    <!-- Bottom Telemetry Ticker -->
+    <g transform="translate(0, 202)" class="mono" font-size="10" fill="#B8C7D9">
+      <text x="0" y="0">
+        <tspan fill="#00E5FF">► STATUS:</tspan> READY FOR HIRE / COLLABORATION
+        <tspan dx="15" fill="#8A2BE2">► DEGREE:</tspan> B.E. AI &amp; ML (2025–2028)
+        <tspan dx="15" fill="#00E5FF">► LOC:</tspan> COIMBATORE, IN
+      </text>
+    </g>
+  </g>
+
+  <!-- Right Graphic: 3D Holographic AI Neural Core / HUD Graphic -->
+  <g transform="translate(730, 200)">
+    <!-- Outer Orbit Ring 1 -->
+    <circle cx="0" cy="0" r="105" fill="none" stroke="#00E5FF" stroke-opacity="0.15" stroke-width="1.5" stroke-dasharray="4 8"/>
+    
+    <!-- Outer Orbit Ring 2 (Rotating) -->
+    <g style="transform-origin: 0px 0px; animation: rotateRing 20s linear infinite;">
+      <circle cx="0" cy="0" r="88" fill="none" stroke="#8A2BE2" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="18 12 36 8"/>
+      <circle cx="88" cy="0" r="3" fill="#00E5FF" filter="url(#neonGlowCyan)"/>
+      <circle cx="-88" cy="0" r="3" fill="#FF006E"/>
+    </g>
+
+    <!-- Reverse Orbit Ring 3 -->
+    <g style="transform-origin: 0px 0px; animation: rotateRingRev 14s linear infinite;">
+      <circle cx="0" cy="0" r="70" fill="none" stroke="#00E5FF" stroke-opacity="0.4" stroke-width="1.2" stroke-dasharray="40 10 10 10"/>
+      <circle cx="0" cy="70" r="3.5" fill="#8A2BE2" filter="url(#neonGlowPurple)"/>
+      <circle cx="0" cy="-70" r="2.5" fill="#00E5FF"/>
+    </g>
+
+    <!-- Inner Target Crosshairs -->
+    <line x1="-55" y1="0" x2="55" y2="0" stroke="#00E5FF" stroke-opacity="0.25" stroke-width="1"/>
+    <line x1="0" y1="-55" x2="0" y2="55" stroke="#00E5FF" stroke-opacity="0.25" stroke-width="1"/>
+    <circle cx="0" cy="0" r="50" fill="#05070D" fill-opacity="0.8" stroke="#00E5FF" stroke-opacity="0.6" stroke-width="1.5"/>
+
+    <!-- Neural Network Nodes inside HUD -->
+    <!-- Synapse lines -->
+    <g stroke="#00E5FF" stroke-opacity="0.4" stroke-width="1.2">
+      <line x1="-24" y1="-18" x2="0" y2="0" class="flow-line"/>
+      <line x1="-24" y1="18" x2="0" y2="0" class="flow-line"/>
+      <line x1="24" y1="-18" x2="0" y2="0" class="flow-line"/>
+      <line x1="24" y1="18" x2="0" y2="0" class="flow-line"/>
+      <line x1="0" y1="-28" x2="0" y2="0"/>
+      <line x1="0" y1="28" x2="0" y2="0"/>
+    </g>
+
+    <!-- Peripheral Nodes -->
+    <circle cx="-24" cy="-18" r="4.5" fill="#00E5FF" style="animation: pulseNode 3s infinite;"/>
+    <circle cx="-24" cy="18" r="4.5" fill="#8A2BE2" style="animation: pulsePurple 3s infinite 0.5s;"/>
+    <circle cx="24" cy="-18" r="4.5" fill="#8A2BE2" style="animation: pulsePurple 3s infinite 1s;"/>
+    <circle cx="24" cy="18" r="4.5" fill="#00E5FF" style="animation: pulseNode 3s infinite 1.5s;"/>
+    <circle cx="0" cy="-28" r="3.5" fill="#00E5FF"/>
+    <circle cx="0" cy="28" r="3.5" fill="#FF006E"/>
+
+    <!-- Central Pulsing Core Node -->
+    <circle cx="0" cy="0" r="10" fill="url(#cyanPurple)" filter="url(#neonGlowCyan)" style="animation: pulseNode 2s infinite ease-in-out;"/>
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
+
+    <!-- Text HUD inside core -->
+    <text x="0" y="42" text-anchor="middle" class="mono" font-size="8" fill="#00E5FF" font-weight="700" letter-spacing="1">NEURAL SYNC</text>
+  </g>
+
+  <!-- Bottom Terminal Decorative Accent -->
+  <g transform="translate(42, 332)">
+    <line x1="0" y1="0" x2="836" y2="0" stroke="#00E5FF" stroke-opacity="0.2" stroke-width="1"/>
+    <line x1="0" y1="0" x2="90" y2="0" stroke="#00E5FF" stroke-width="2.5" filter="url(#neonGlowCyan)"/>
+    <line x1="746" y1="0" x2="836" y2="0" stroke="#8A2BE2" stroke-width="2.5" filter="url(#neonGlowPurple)"/>
+    <circle cx="95" cy="0" r="2.5" fill="#00E5FF"/>
+    <circle cx="741" cy="0" r="2.5" fill="#8A2BE2"/>
+  </g>
+</svg>

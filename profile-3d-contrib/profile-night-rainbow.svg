@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gridBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070D"/>
+      <stop offset="100%" stop-color="#0A0F18"/>
+    </linearGradient>
+    <linearGradient id="neonBar1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#07111D"/>
+      <stop offset="100%" stop-color="#00E5FF"/>
+    </linearGradient>
+    <linearGradient id="neonBar2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#1A0A2A"/>
+      <stop offset="100%" stop-color="#8A2BE2"/>
+    </linearGradient>
+    <linearGradient id="neonBar3" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#2A0515"/>
+      <stop offset="100%" stop-color="#FF006E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="850" height="420" rx="10" fill="url(#gridBg)" stroke="#00E5FF" stroke-opacity="0.2"/>
+  
+  <!-- Isometric Grid Base -->
+  <g transform="translate(425, 230) scale(1, 0.58) rotate(45)">
+    <!-- Grid Plate -->
+    <rect x="-190" y="-190" width="380" height="380" fill="#07111D" stroke="#00E5FF" stroke-opacity="0.2" stroke-width="1.5"/>
+    
+    <!-- Isometric Grid Blocks -->
+    <g opacity="0.85">
+      <!-- Row -3 -->
+      <rect x="-150" y="-150" width="26" height="26" fill="#00E5FF" fill-opacity="0.2"/>
+      <rect x="-115" y="-150" width="26" height="26" fill="#00E5FF" fill-opacity="0.5"/>
+      <rect x="-80" y="-150" width="26" height="26" fill="#8A2BE2" fill-opacity="0.7"/>
+      <rect x="-45" y="-150" width="26" height="26" fill="#00E5FF" fill-opacity="0.9"/>
+      <rect x="-10" y="-150" width="26" height="26" fill="#00E5FF" fill-opacity="0.4"/>
+      <rect x="25" y="-150" width="26" height="26" fill="#8A2BE2" fill-opacity="0.8"/>
+      <rect x="60" y="-150" width="26" height="26" fill="#FF006E" fill-opacity="0.9"/>
+      <rect x="95" y="-150" width="26" height="26" fill="#00E5FF" fill-opacity="0.3"/>
+      <rect x="130" y="-150" width="26" height="26" fill="#8A2BE2" fill-opacity="0.6"/>
+
+      <!-- Row -2 -->
+      <rect x="-150" y="-115" width="26" height="26" fill="#00E5FF" fill-opacity="0.4"/>
+      <rect x="-115" y="-115" width="26" height="26" fill="#8A2BE2" fill-opacity="0.9"/>
+      <rect x="-80" y="-115" width="26" height="26" fill="#00E5FF" fill-opacity="0.8"/>
+      <rect x="-45" y="-115" width="26" height="26" fill="#FF006E" fill-opacity="0.7"/>
+      <rect x="-10" y="-115" width="26" height="26" fill="#00E5FF" fill-opacity="0.6"/>
+      <rect x="25" y="-115" width="26" height="26" fill="#00E5FF" fill-opacity="0.3"/>
+      <rect x="60" y="-115" width="26" height="26" fill="#8A2BE2" fill-opacity="0.8"/>
+      <rect x="95" y="-115" width="26" height="26" fill="#FF006E" fill-opacity="0.85"/>
+      <rect x="130" y="-115" width="26" height="26" fill="#00E5FF" fill-opacity="0.5"/>
+
+      <!-- Row -1 -->
+      <rect x="-150" y="-80" width="26" height="26" fill="#8A2BE2" fill-opacity="0.6"/>
+      <rect x="-115" y="-80" width="26" height="26" fill="#00E5FF" fill-opacity="0.7"/>
+      <rect x="-80" y="-80" width="26" height="26" fill="#00E5FF" fill-opacity="0.95"/>
+      <rect x="-45" y="-80" width="26" height="26" fill="#8A2BE2" fill-opacity="0.8"/>
+      <rect x="-10" y="-80" width="26" height="26" fill="#FF006E" fill-opacity="0.9"/>
+      <rect x="25" y="-80" width="26" height="26" fill="#00E5FF" fill-opacity="0.6"/>
+      <rect x="60" y="-80" width="26" height="26" fill="#8A2BE2" fill-opacity="0.7"/>
+      <rect x="95" y="-80" width="26" height="26" fill="#00E5FF" fill-opacity="0.4"/>
+      <rect x="130" y="-80" width="26" height="26" fill="#00E5FF" fill-opacity="0.8"/>
+
+      <!-- Row 0 -->
+      <rect x="-150" y="-45" width="26" height="26" fill="#00E5FF" fill-opacity="0.5"/>
+      <rect x="-115" y="-45" width="26" height="26" fill="#8A2BE2" fill-opacity="0.85"/>
+      <rect x="-80" y="-45" width="26" height="26" fill="#FF006E" fill-opacity="0.8"/>
+      <rect x="-45" y="-45" width="26" height="26" fill="#00E5FF" fill-opacity="1"/>
+      <rect x="-10" y="-45" width="26" height="26" fill="#8A2BE2" fill-opacity="0.9"/>
+      <rect x="25" y="-45" width="26" height="26" fill="#00E5FF" fill-opacity="0.7"/>
+      <rect x="60" y="-45" width="26" height="26" fill="#FF006E" fill-opacity="0.75"/>
+      <rect x="95" y="-45" width="26" height="26" fill="#8A2BE2" fill-opacity="0.8"/>
+      <rect x="130" y="-45" width="26" height="26" fill="#00E5FF" fill-opacity="0.6"/>
+
+      <!-- Row 1 -->
+      <rect x="-150" y="-10" width="26" height="26" fill="#FF006E" fill-opacity="0.6"/>
+      <rect x="-115" y="-10" width="26" height="26" fill="#00E5FF" fill-opacity="0.7"/>
+      <rect x="-80" y="-10" width="26" height="26" fill="#8A2BE2" fill-opacity="0.8"/>
+      <rect x="-45" y="-10" width="26" height="26" fill="#00E5FF" fill-opacity="0.9"/>
+      <rect x="-10" y="-10" width="26" height="26" fill="#00E5FF" fill-opacity="0.8"/>
+      <rect x="25" y="-10" width="26" height="26" fill="#8A2BE2" fill-opacity="0.9"/>
+      <rect x="60" y="-10" width="26" height="26" fill="#FF006E" fill-opacity="0.8"/>
+      <rect x="95" y="-10" width="26" height="26" fill="#00E5FF" fill-opacity="0.6"/>
+      <rect x="130" y="-10" width="26" height="26" fill="#8A2BE2" fill-opacity="0.5"/>
+
+      <!-- Row 2 -->
+      <rect x="-150" y="25" width="26" height="26" fill="#00E5FF" fill-opacity="0.3"/>
+      <rect x="-115" y="25" width="26" height="26" fill="#8A2BE2" fill-opacity="0.6"/>
+      <rect x="-80" y="25" width="26" height="26" fill="#00E5FF" fill-opacity="0.85"/>
+      <rect x="-45" y="25" width="26" height="26" fill="#FF006E" fill-opacity="0.8"/>
+      <rect x="-10" y="25" width="26" height="26" fill="#8A2BE2" fill-opacity="0.7"/>
+      <rect x="25" y="25" width="26" height="26" fill="#00E5FF" fill-opacity="0.8"/>
+      <rect x="60" y="25" width="26" height="26" fill="#00E5FF" fill-opacity="0.5"/>
+      <rect x="95" y="25" width="26" height="26" fill="#8A2BE2" fill-opacity="0.75"/>
+      <rect x="130" y="25" width="26" height="26" fill="#00E5FF" fill-opacity="0.4"/>
+
+      <!-- Row 3 -->
+      <rect x="-150" y="60" width="26" height="26" fill="#8A2BE2" fill-opacity="0.5"/>
+      <rect x="-115" y="60" width="26" height="26" fill="#00E5FF" fill-opacity="0.6"/>
+      <rect x="-80" y="60" width="26" height="26" fill="#8A2BE2" fill-opacity="0.75"/>
+      <rect x="-45" y="60" width="26" height="26" fill="#00E5FF" fill-opacity="0.9"/>
+      <rect x="-10" y="60" width="26" height="26" fill="#FF006E" fill-opacity="0.85"/>
+      <rect x="25" y="60" width="26" height="26" fill="#8A2BE2" fill-opacity="0.6"/>
+      <rect x="60" y="60" width="26" height="26" fill="#00E5FF" fill-opacity="0.8"/>
+      <rect x="95" y="60" width="26" height="26" fill="#8A2BE2" fill-opacity="0.7"/>
+      <rect x="130" y="60" width="26" height="26" fill="#00E5FF" fill-opacity="0.3"/>
+    </g>
+  </g>
+
+  <!-- Title Overlay -->
+  <g transform="translate(30, 40)" font-family="'SF Mono', Monaco, monospace">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#00E5FF" letter-spacing="1">3D CONTRIBUTION MATRIX</text>
+    <text x="0" y="18" font-size="10" fill="#B8C7D9">USER: mohanprasanth02 // NIGHT RAINBOW THEME</text>
+  </g>
+</svg>

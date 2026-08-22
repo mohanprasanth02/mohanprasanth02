@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 180" width="100%" height="100%" style="background: transparent;">
+  <defs>
+    <linearGradient id="footerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070D"/>
+      <stop offset="50%" stop-color="#07111D"/>
+      <stop offset="100%" stop-color="#0A0F18"/>
+    </linearGradient>
+
+    <linearGradient id="footerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#FF006E"/>
+    </linearGradient>
+
+    <filter id="fGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes footerGlowPulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; filter: drop-shadow(0 0 10px #00E5FF); }
+    }
+    @keyframes spinWheel {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .mono { font-family: 'SF Mono', Monaco, 'Fira Code', 'Courier New', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  </style>
+
+  <!-- Outer Base -->
+  <rect x="2" y="2" width="916" height="176" rx="12" fill="url(#footerBg)" stroke="#00E5FF" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- HUD Corner Accents -->
+  <path d="M 12 28 L 12 12 L 28 12" fill="none" stroke="#00E5FF" stroke-width="2"/>
+  <path d="M 892 12 L 908 12 L 908 28" fill="none" stroke="#00E5FF" stroke-width="2"/>
+  <path d="M 12 152 L 12 168 L 28 168" fill="none" stroke="#00E5FF" stroke-width="2"/>
+  <path d="M 892 168 L 908 168 L 908 152" fill="none" stroke="#00E5FF" stroke-width="2"/>
+
+  <!-- Central Ambient Light Ribbon -->
+  <line x1="160" y1="20" x2="760" y2="20" stroke="url(#footerGrad)" stroke-width="2" filter="url(#fGlow)"/>
+
+  <!-- Center Branding -->
+  <g transform="translate(460, 68)">
+    <text text-anchor="middle" class="sans" font-size="22" font-weight="900" fill="#FFFFFF" letter-spacing="3">
+      MOHAN PRASANTH K
+    </text>
+    <text y="26" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="url(#footerGrad)" letter-spacing="2.5">
+      AI × ML × VISION × SECURITY × FULL-STACK
+    </text>
+    <text y="48" text-anchor="middle" class="mono" font-size="10" fill="#B8C7D9" letter-spacing="1">
+      COIMBATORE, INDIA · MOHANPRASANTH02@GMAIL.COM · MOHAN-MP.VERCEL.APP
+    </text>
+  </g>
+
+  <!-- Bottom Terminal Tag -->
+  <g transform="translate(460, 150)" class="mono" font-size="9">
+    <rect x="-140" y="-12" width="280" height="22" rx="4" fill="#07111D" stroke="#00E5FF" stroke-opacity="0.3" stroke-width="1"/>
+    <circle cx="-120" cy="-1" r="3" fill="#00E5FF" style="animation: footerGlowPulse 2s infinite;"/>
+    <text x="-105" y="2" fill="#00E5FF" font-weight="700" letter-spacing="1.2">SYSTEM // ONLINE &amp; OPERATIONAL</text>
+  </g>
+
+  <!-- Left/Right Hex Graphic Icons -->
+  <g transform="translate(70, 90)">
+    <polygon points="0,-22 19,-11 19,11 0,22 -19,11 -19,-11" fill="#07111D" stroke="#00E5FF" stroke-opacity="0.4" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="4" fill="#00E5FF"/>
+  </g>
+  <g transform="translate(850, 90)">
+    <polygon points="0,-22 19,-11 19,11 0,22 -19,11 -19,-11" fill="#07111D" stroke="#8A2BE2" stroke-opacity="0.4" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="4" fill="#8A2BE2"/>
+  </g>
+</svg>

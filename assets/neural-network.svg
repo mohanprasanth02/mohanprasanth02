@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 180" width="100%" height="100%" style="background: transparent;">
+  <defs>
+    <linearGradient id="netBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070D"/>
+      <stop offset="100%" stop-color="#07111D"/>
+    </linearGradient>
+    <filter id="nodeGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes netPulse {
+      0%, 100% { r: 5px; opacity: 0.8; }
+      50% { r: 7.5px; opacity: 1; filter: drop-shadow(0 0 6px #00E5FF); }
+    }
+    @keyframes netPulsePurple {
+      0%, 100% { r: 5px; opacity: 0.8; }
+      50% { r: 7.5px; opacity: 1; filter: drop-shadow(0 0 6px #8A2BE2); }
+    }
+    @keyframes synDash {
+      to { stroke-dashoffset: -20; }
+    }
+    .mono { font-family: 'SF Mono', Monaco, 'Fira Code', 'Courier New', monospace; }
+    .syn-active { stroke-dasharray: 4 4; animation: synDash 1.5s linear infinite; }
+  </style>
+
+  <!-- Base -->
+  <rect x="2" y="2" width="916" height="176" rx="10" fill="url(#netBg)" stroke="#00E5FF" stroke-opacity="0.25" stroke-width="1.2"/>
+
+  <!-- Layer Header Titles -->
+  <g class="mono" font-size="9" font-weight="700" fill="#8A2BE2">
+    <text x="100" y="26" text-anchor="middle">INPUT TENSORS [L0]</text>
+    <text x="340" y="26" text-anchor="middle">CONVOLUTION / EMBEDDINGS [L1]</text>
+    <text x="580" y="26" text-anchor="middle">DENSE / ATTENTION [L2]</text>
+    <text x="820" y="26" text-anchor="middle">PREDICTION PROBABILITIES [L3]</text>
+  </g>
+
+  <!-- Synaptic Connections (Layer 0 to Layer 1) -->
+  <g stroke="#00E5FF" stroke-opacity="0.2" stroke-width="1">
+    <!-- L0 Node 1 (100, 60) -->
+    <line x1="100" y1="60" x2="340" y2="50" class="syn-active"/>
+    <line x1="100" y1="60" x2="340" y2="90"/>
+    <line x1="100" y1="60" x2="340" y2="130"/>
+    
+    <!-- L0 Node 2 (100, 100) -->
+    <line x1="100" y1="100" x2="340" y2="50"/>
+    <line x1="100" y1="100" x2="340" y2="90" class="syn-active"/>
+    <line x1="100" y1="100" x2="340" y2="130"/>
+
+    <!-- L0 Node 3 (100, 140) -->
+    <line x1="100" y1="140" x2="340" y2="50"/>
+    <line x1="100" y1="140" x2="340" y2="90"/>
+    <line x1="100" y1="140" x2="340" y2="130" class="syn-active"/>
+  </g>
+
+  <!-- Synaptic Connections (Layer 1 to Layer 2) -->
+  <g stroke="#8A2BE2" stroke-opacity="0.25" stroke-width="1">
+    <line x1="340" y1="50" x2="580" y2="60" class="syn-active"/>
+    <line x1="340" y1="50" x2="580" y2="100"/>
+    <line x1="340" y1="50" x2="580" y2="140"/>
+
+    <line x1="340" y1="90" x2="580" y2="60"/>
+    <line x1="340" y1="90" x2="580" y2="100" class="syn-active"/>
+    <line x1="340" y1="90" x2="580" y2="140"/>
+
+    <line x1="340" y1="130" x2="580" y2="60"/>
+    <line x1="340" y1="130" x2="580" y2="100"/>
+    <line x1="340" y1="130" x2="580" y2="140" class="syn-active"/>
+  </g>
+
+  <!-- Synaptic Connections (Layer 2 to Layer 3) -->
+  <g stroke="#FF006E" stroke-opacity="0.3" stroke-width="1">
+    <line x1="580" y1="60" x2="820" y2="75" class="syn-active"/>
+    <line x1="580" y1="60" x2="820" y2="125"/>
+
+    <line x1="580" y1="100" x2="820" y2="75"/>
+    <line x1="580" y1="100" x2="820" y2="125" class="syn-active"/>
+
+    <line x1="580" y1="140" x2="820" y2="75"/>
+    <line x1="580" y1="140" x2="820" y2="125"/>
+  </g>
+
+  <!-- Nodes Layer 0 -->
+  <g>
+    <circle cx="100" cy="60" r="5" fill="#00E5FF" filter="url(#nodeGlow)" style="animation: netPulse 2.5s infinite;"/>
+    <text x="82" y="64" class="mono" font-size="8" fill="#B8C7D9" text-anchor="end">Image/Text</text>
+    
+    <circle cx="100" cy="100" r="5" fill="#00E5FF" filter="url(#nodeGlow)" style="animation: netPulse 2.5s infinite 0.5s;"/>
+    <text x="82" y="104" class="mono" font-size="8" fill="#B8C7D9" text-anchor="end">Keypoints</text>
+
+    <circle cx="100" cy="140" r="5" fill="#00E5FF" filter="url(#nodeGlow)" style="animation: netPulse 2.5s infinite 1s;"/>
+    <text x="82" y="144" class="mono" font-size="8" fill="#B8C7D9" text-anchor="end">Tabular Data</text>
+  </g>
+
+  <!-- Nodes Layer 1 -->
+  <g>
+    <circle cx="340" cy="50" r="6" fill="#8A2BE2" filter="url(#nodeGlow)" style="animation: netPulsePurple 3s infinite;"/>
+    <text x="355" y="54" class="mono" font-size="8" fill="#FFFFFF">CNN Feature Map</text>
+
+    <circle cx="340" cy="90" r="6" fill="#8A2BE2" filter="url(#nodeGlow)" style="animation: netPulsePurple 3s infinite 0.6s;"/>
+    <text x="355" y="94" class="mono" font-size="8" fill="#FFFFFF">BERT Tokenizer</text>
+
+    <circle cx="340" cy="130" r="6" fill="#8A2BE2" filter="url(#nodeGlow)" style="animation: netPulsePurple 3s infinite 1.2s;"/>
+    <text x="355" y="134" class="mono" font-size="8" fill="#FFFFFF">ResNet Latents</text>
+  </g>
+
+  <!-- Nodes Layer 2 -->
+  <g>
+    <circle cx="580" cy="60" r="6" fill="#00E5FF" filter="url(#nodeGlow)" style="animation: netPulse 2.8s infinite;"/>
+    <text x="595" y="64" class="mono" font-size="8" fill="#FFFFFF">Hidden Dense 512</text>
+
+    <circle cx="580" cy="100" r="6" fill="#00E5FF" filter="url(#nodeGlow)" style="animation: netPulse 2.8s infinite 0.7s;"/>
+    <text x="595" y="104" class="mono" font-size="8" fill="#FFFFFF">Dropout + ReLU</text>
+
+    <circle cx="580" cy="140" r="6" fill="#00E5FF" filter="url(#nodeGlow)" style="animation: netPulse 2.8s infinite 1.4s;"/>
+    <text x="595" y="144" class="mono" font-size="8" fill="#FFFFFF">Softmax Output</text>
+  </g>
+
+  <!-- Nodes Layer 3 (Output) -->
+  <g>
+    <circle cx="820" cy="75" r="7" fill="#FF006E" filter="url(#nodeGlow)"/>
+    <text x="838" y="79" class="mono" font-size="8" fill="#00E5FF" font-weight="700">Classification</text>
+
+    <circle cx="820" cy="125" r="7" fill="#FF006E" filter="url(#nodeGlow)"/>
+    <text x="838" y="129" class="mono" font-size="8" fill="#8A2BE2" font-weight="700">Regression Score</text>
+  </g>
+</svg>
